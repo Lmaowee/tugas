@@ -17,7 +17,7 @@
   
   <main>
     <div class="container text-center">
-      <h1 class="py-4 bg-dark text-light rounded"><i class="fas fa-swatchbook"></i> book store</h1>
+      <h1 class="py-4 bg-dark text-light rounded"><i class="fas fa-swatchbook"></i> Store Buku</h1>
     
       <!-- user input -->
       <div class="d-flex justify-content-center">
