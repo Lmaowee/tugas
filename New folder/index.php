@@ -17,7 +17,21 @@
   
   <main>
     <div class="container text-center">
-      <h1><i class="fas fa-swatchbook"></i>book store</h1>
+      <h1 class="py-4 bg-dark text-light rounded"><i class="fas fa-swatchbook"></i> book store</h1>
+    
+      <div class="d-flex">
+        <form action="" method="post" class="w-50">
+          <div class="py-2">
+            <div class="input-group mb-2">
+              <div class="input-group-prepend">
+                <div class="input-group-text">@</div>
+              </div>
+              <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="Username">
+          </div>
+
+          </div>
+        </form>
+      </div>
     </div>
   </main>
 
