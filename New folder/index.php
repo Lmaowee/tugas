@@ -19,12 +19,12 @@
     <div class="container text-center">
       <h1 class="py-4 bg-dark text-light rounded"><i class="fas fa-swatchbook"></i> book store</h1>
     
-      <div class="d-flex">
+      <div class="d-flex justify-content-center">
         <form action="" method="post" class="w-50">
           <div class="py-2">
             <div class="input-group mb-2">
               <div class="input-group-prepend">
-                <div class="input-group-text">@</div>
+                <div class="input-group-text"><i class="fa-solid fa-circle-user"></i></div>
               </div>
               <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="Username">
             </div>
