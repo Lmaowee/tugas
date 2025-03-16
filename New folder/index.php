@@ -27,8 +27,7 @@
                 <div class="input-group-text">@</div>
               </div>
               <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="Username">
-          </div>
-
+            </div>
           </div>
         </form>
       </div>
