@@ -44,6 +44,9 @@
               <?php inputElement(icon: "<i class='fas fa-dollar'></i>", placeholder:"Harga Buku", name:"Harga_Buku", value: ""); ?>
             </div>
           </div>
+          <div class="d-flex">
+              <?php buttonElement(btnid:"btn-create",styleclass:"btn btn-success",text:"create",name:"create",attr:"") ?>
+          </div>
         </form>
       </div>
       
