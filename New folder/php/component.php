@@ -1,10 +1,10 @@
 <?php 
-  function inputElement() {
+  function inputElement($icon,$placeholder,$name, $value) {
     $ele = "<div class=\"input-group mb-2\">
               <div class=\"input-group-prepend\">
-                <div class=\"input-group-text bg-warning\"><i class=\"fa-solid fa-circle-user\"></i></div>
+                <div class=\"input-group-text bg-warning\">$icon</div>
               </div>
-              <input type=\"text\" class=\"form-control\" id=\"inlineFormInputGroup\" placeholder=\"ID\">
+              <input type=\"text\" name='$name' value='$value' \"form-control\" id=\"inlineFormInputGroup\" placeholder='$placeholder'>
             </div>";
 
             echo $ele;
