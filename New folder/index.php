@@ -25,31 +25,21 @@
     <div class="container text-center">
       <h1 class="py-4 bg-dark text-light rounded"><i class="fas fa-swatchbook"></i> Store Buku</h1>
     
-      <!-- ID -->
+      <!-- user input -->
       <div class="d-flex justify-content-center">
-        <div class="py-2">
-          <?php inputElement(icon: "<i class='fas fa-book'></i>", placeholder: "ID", name: "id_buku", value: ""); ?>   
-        </div>
-      </div>
-      <!-- Nama Buku -->
-      <div class="d-flex justify-content-center">
+        <form action="" method="post" class="w-50">
+          <div class="py-2">
+              <div class="input-group mb-2">
+                <div class="input-group-prepend">
+                  <div class="input-group-text bg-warning"><i class="fa-solid fa-circle-user"></i></div>
+                </div>
+                <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="ID">
+              </div>
+          </div>
+          <!--  -->
           <div class="pt-2">
-            <?php inputElement(icon: "<i class='fas fa-book'></i>", placeholder: "Nama Buku", name: "nama_buku", value: ""); ?>
+            <?php inputElement(icon: "<i class='fas fa-book'></i>", placeholder:"Book Name", name:"nama_buku", value: ""); ?>
           </div>
-      </div>
-      <div class="d-flex justify-content-center">
-        <div class="row">
-
-          <div class="col">
-            <?php inputElement(icon: "<i class='fa-solid fa-person'></i>", placeholder: "Penulis Buku", name: "penulis_buku", value: ""); ?>
-          </div>
-          
-          <div class="col">
-            <?php inputElement(icon: "<i class='fas fa-dollar-sign'></i>", placeholder: "Harga Buku", name: "harga_buku", value: ""); ?>
-          </div>
-        </div>
-      </div>
-
         </form>
       </div>
       
