@@ -1,3 +1,9 @@
+<?php 
+  require_once ("./php/component.php");
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -31,7 +37,9 @@
             </div>
           </div>
           <!--  -->
-        
+          <div class="pt-2">
+            <?php inputElement(icon: "<i class='fas fa-book'></i>", placeholder: "Book Name", name: "nama_buku", value: ""); ?>
+          </div>
         </form>
       </div>
       
