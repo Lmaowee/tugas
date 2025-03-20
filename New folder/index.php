@@ -37,8 +37,19 @@
             <?php inputElement(icon: "<i class='fas fa-book'></i>", placeholder: "Nama Buku", name: "nama_buku", value: ""); ?>
           </div>
       </div>
+      <div class="d-flex justify-content-center">
+        <div class="row">
 
-      
+          <div class="col">
+            <?php inputElement(icon: "<i class='fa-solid fa-person'></i>", placeholder: "Penulis Buku", name: "penulis_buku", value: ""); ?>
+          </div>
+          
+          <div class="col">
+            <?php inputElement(icon: "<i class='fas fa-dollar-sign'></i>", placeholder: "Harga Buku", name: "harga_buku", value: ""); ?>
+          </div>
+        </div>
+      </div>
+
         </form>
       </div>
       
