@@ -29,16 +29,20 @@
       <div class="d-flex justify-content-center">
         <form action="" method="post" class="w-50">
           <div class="py-2">
-              <div class="input-group mb-2">
-                <div class="input-group-prepend">
-                  <div class="input-group-text bg-warning"><i class="fa-solid fa-circle-user"></i></div>
-                </div>
-                <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="ID">
-              </div>
+            <?php inputElement(icon: "<i class='fas fa-key'></i>", placeholder:"ID", name:"id", value: ""); ?>
           </div>
           <!--  -->
           <div class="pt-2">
-            <?php inputElement(icon: "<i class='fas fa-book'></i>", placeholder:"Book Name", name:"nama_buku", value: ""); ?>
+            <?php inputElement(icon: "<i class='fas fa-book'></i>", placeholder:"Nama Buku", name:"nama_buku", value: ""); ?>
+          </div>
+          <!--  -->
+          <div class="row">
+            <div class="col">
+              <?php inputElement(icon: "<i class='fas fa-person'></i>", placeholder:"Nama Author", name:"nama_author", value: ""); ?>
+            </div>
+            <div class="col">
+              <?php inputElement(icon: "<i class='fas fa-dollar'></i>", placeholder:"Harga Buku", name:"Harga_Buku", value: ""); ?>
+            </div>
           </div>
         </form>
       </div>
