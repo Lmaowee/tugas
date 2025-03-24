@@ -45,7 +45,7 @@
             </div>
           </div>
           <div class="d-flex">
-              <?php buttonElement(btnid:"btn-create",styleclass:"btn btn-success",text:"create",name:"create",attr:"") ?>
+              <?php buttonElement(btnid:"btn-create",styleclass:"btn btn-success",text:"<i class='fas fa-plus'></i>",name:"create",attr:"") ?>
           </div>
         </form>
       </div>
