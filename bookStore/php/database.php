@@ -30,7 +30,7 @@ function createDataBase () {
     ";
 
     if(mysqli_query($con, $sql)) {
-      echo "table cereated.";
+      return $con;
     }
 
     else {

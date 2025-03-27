@@ -9,10 +9,22 @@
 
 #tbody {
   color: white;
-  background-color: darkslategrey;
+  background-color: rgb(6, 32, 32);
 }
 
 table .btnedit {
   color: red;
   cursor: pointer;
 }
+
+.success {
+  background-color: lightgreen;
+  padding: 1em;
+}
+
+.error {
+  background-color: tomato;
+  padding: 1em;
+}
+
+
