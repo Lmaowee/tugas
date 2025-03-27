@@ -6,3 +6,13 @@
 .d-flex table {
   margin: 1em 10em;
 }
+
+#tbody {
+  color: white;
+  background-color: darkslategrey;
+}
+
+table .btnedit {
+  color: red;
+  cursor: pointer;
+}

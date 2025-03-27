@@ -65,6 +65,15 @@
                   <th>Edit</th>
                 </tr>
               </thead>
+              <tbody id="tbody">
+                <tr>
+                  <td>1</td>
+                  <td>Nama Buku</td>
+                  <td>Tere</td>
+                  <td>44.99</td>
+                  <td><i class="fas fa-edit btnedit"></i></td>
+                </tr>
+              </tbody>
             </table>
          </div>
     </div>
