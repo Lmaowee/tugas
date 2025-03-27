@@ -25,13 +25,14 @@ function createData(){
             
   
     if(mysqli_query($GLOBALS['con'],$sql)){
-      echo "record successfully inserted";
+      TextNode(classname:"success", message:"data berhasil tersimpan");
+      echo "";
     }else{
       echo "error";
     }
 
   }else{
-    TextNode(classname:"success", message:"isi data dalam textbox");
+    TextNode(classname:"error", message:"isi data dalam textbox");
   }
 }
 
