@@ -25,13 +25,13 @@ function createData(){
             
   
     if(mysqli_query($GLOBALS['con'],$sql)){
-      echo "record seucessfull inserted";
+      echo "record successfully inserted";
     }else{
       echo "error";
     }
 
   }else{
-    echo "provide data in the textbox";
+    TextNode(classname:"success", message:"isi data dalam textbox");
   }
 }
 
@@ -44,4 +44,10 @@ function textboxValue($value){
   else {
     return $textbox;
   }
+}
+
+// messages
+function TextNode($classname, $message){
+  $element = "<h6 class='$classname'>$message</h6>";
+  echo $element;
 }
