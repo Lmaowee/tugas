@@ -18,7 +18,25 @@ function createDataBase () {
   $sql = "CREATE DATABASE IF NOT EXISTS $dbname";
 
   if (mysqli_query($con, $sql)) {
-    echo "database created..";
+    $con = mysqli_connect($servername, $username, $password, $dbname);
+
+    $sql = "
+      CREATE TABLE IF NOT EXISTS books(
+      id int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+      nama_buku  VARCHAR(25) NOT NULL, 
+      nama_author VARCHAR(20),
+      harga_buku FLOAT
+      );
+    ";
+
+    if(mysqli_query($con, $sql)) {
+      echo "table cereated.";
+    }
+
+    else {
+      echo "cannot create table";
+    }
+
   }
 
   else {
