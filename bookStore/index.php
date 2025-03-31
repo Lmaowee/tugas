@@ -17,7 +17,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">  
  
   <!-- styles -->
-   <link rel="stylesheet" href="styles.css">
+   <link rel="stylesheet" href="./styles.css">
 
 </head>
 <body>
@@ -75,24 +75,24 @@
                   if($result) {
                     while($row = mysqli_fetch_assoc($result)) { ?>
                       <tr>
-                        <td>
-                          <?php echo $row['id']?>
+                        <td data-id="<?php echo $row['id'];?>">
+                          <?php echo $row['id'];?>
+                        </td>
+
+                        <td data-id="<?php echo $row['id'];?>">
+                          <?php echo $row['nama_buku'];?>
+                        </td>
+
+                        <td data-id="<?php echo $row['id'];?>">
+                          <?php echo $row['nama_author'];?>
+                        </td>
+
+                        <td data-id="<?php echo $row['id'];?>">
+                          <?php echo $row['harga_buku'];?>
                         </td>
 
                         <td>
-                          <?php echo $row['nama_buku']?>
-                        </td>
-
-                        <td>
-                          <?php echo $row['nama_author']?>
-                        </td>
-
-                        <td>
-                          <?php echo $row['harga_buku']?>
-                        </td>
-
-                        <td>
-                          <i class="fas fa-edit btnedit"></i>
+                          <i class="fas fa-edit btnedit" data-id="<?php echo $row['id'];?>"></i>
                         </td>
 
 
@@ -115,5 +115,8 @@
 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+<script src="./php/main.js"></script>
+
 </body>
 </html>
