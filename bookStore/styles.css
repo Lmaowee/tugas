@@ -5,12 +5,10 @@
 
 .d-flex table {
   margin: 1em 10em;
+  padding: 12px;
+  
 }
 
-#tbody {
-  color: white;
-  background-color: rgb(6, 32, 32);
-}
 
 table .btnedit {
   color: red;
