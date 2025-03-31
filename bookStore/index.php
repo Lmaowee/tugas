@@ -67,13 +67,44 @@
                 </tr>
               </thead>
               <tbody id="tbody">
-                <tr>
-                  <td>1</td>
-                  <td>Nama Buku</td>
-                  <td>Tere</td>
-                  <td>44.99</td>
-                  <td><i class="fas fa-edit btnedit"></i></td>
-                </tr>
+                <?php 
+                
+                if(isset($_POST['read'])){
+                  $result = getData();
+
+                  if($result) {
+                    while($row = mysqli_fetch_assoc($result)) { ?>
+                      <tr>
+                        <td>
+                          <?php echo $row['id']?>
+                        </td>
+
+                        <td>
+                          <?php echo $row['nama_buku']?>
+                        </td>
+
+                        <td>
+                          <?php echo $row['nama_author']?>
+                        </td>
+
+                        <td>
+                          <?php echo $row['harga_buku']?>
+                        </td>
+
+                        <td>
+                          <i class="fas fa-edit btnedit"></i>
+                        </td>
+
+
+                      </tr>
+                  
+                  <?php
+                    }
+                  }
+                }
+                
+
+                ?>
               </tbody>
             </table>
          </div>
