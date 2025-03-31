@@ -12,6 +12,7 @@ if (isset($_POST['create'])) {
   createData();
 }
 
+
 function createData(){
   $namaBuku = textboxValue(value:"nama_buku");
   $authorBuku = textboxValue(value:"nama_author");
@@ -51,4 +52,16 @@ function textboxValue($value){
 function TextNode($classname, $message){
   $element = "<h6 class='$classname'>$message</h6>";
   echo $element;
+}
+
+// get data from mysql database
+
+function getData() {
+  $sql = "SELECT * FROM books";
+
+  $result = mysqli_query($GLOBALS['con'], $sql);
+
+  if(mysqli_num_rows($result) > 0){
+    return $result;
+  }
 }
