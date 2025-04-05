@@ -12,6 +12,9 @@ if (isset($_POST['create'])) {
   createData();
 }
 
+if (isset($_POST['update'])) {
+  UpdateData();
+}
 
 function createData(){
   $namaBuku = textboxValue(value:"nama_buku");
@@ -26,14 +29,14 @@ function createData(){
             
   
     if(mysqli_query($GLOBALS['con'],$sql)){
-      TextNode(classname:"success", message:"data berhasil tersimpan");
+      TextNode(classname:"success", msg:"data berhasil tersimpan");
       echo "";
     }else{
       echo "error";
     }
 
   }else{
-    TextNode(classname:"error", message:"isi data dalam textbox");
+    TextNode(classname:"error", msg:"isi data dalam textbox");
   }
 }
 
@@ -49,8 +52,8 @@ function textboxValue($value){
 }
 
 // messages
-function TextNode($classname, $message){
-  $element = "<h6 class='$classname'>$message</h6>";
+function TextNode($classname, $msg){
+  $element = "<h6 class='$classname'>$msg</h6>";
   echo $element;
 }
 
@@ -64,4 +67,29 @@ function getData() {
   if(mysqli_num_rows($result) > 0){
     return $result;
   }
+}
+
+// update data
+function UpdateData() {
+  $bookid = textboxValue(value:"id");
+  $bookname = textboxValue(value:"nama_buku");
+  $bookpublisher = textboxValue(value:"nama_author");
+  $bookprice = textboxValue(value:"Harga_Buku");
+
+  if ($bookname && $bookpublisher && $bookprice) {
+    $sql = "
+      UPDATE books SET nama_buku ='$bookname', nama_author = '$bookpublisher', Harga_Buku = '$bookprice' WHERE id= '$bookid'
+    ";
+
+    if(mysqli_query($GLOBALS['con'],$sql)) {
+      TextNode(classname:"success", msg:"Data successfully updated");
+    } else {
+      TextNode(classname:"error", msg:"Enable to update data");
+    }
+
+  } else {
+    TextNode(classname:"error", msg:"Select data usinng edit icon");
+  }
+
+
 }
