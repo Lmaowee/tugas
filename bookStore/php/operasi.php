@@ -16,13 +16,17 @@ if (isset($_POST['update'])) {
   UpdateData();
 }
 
+if (isset($_POST['delete'])){
+  deleteRecord();
+}
+
 function createData(){
   $namaBuku = textboxValue(value:"nama_buku");
   $authorBuku = textboxValue(value:"nama_author");
   $hargaBuku = textboxValue(value:"Harga_Buku");
 
   if($namaBuku && $authorBuku && $hargaBuku){
-    $sql = "INSERT INTO books(nama_buku, nama_author, Harga_Buku)
+    $sql = "INSERT INTO books(nama_buku, nama_author, harga_buku)
             VALUES ('$namaBuku', 
                     '$authorBuku',
                     '$hargaBuku')";
@@ -91,5 +95,16 @@ function UpdateData() {
     TextNode(classname:"error", msg:"Select data usinng edit icon");
   }
 
+}
 
+function deleteRecord() {
+  $bookid = (int)textboxValue(value:"id");
+
+  $sql = "DELETE FROM books WHERE id=$bookid";
+
+  if(mysqli_query($GLOBALS['con'], $sql)){
+    TextNode(classname:"success", msg:"record deleted succesfully");
+  }else{
+    TextNode(classname:"error", msg:"enable to delete record");
+  }
 }
