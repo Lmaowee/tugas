@@ -25,7 +25,7 @@ function createDataBase () {
       id int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
       nama_buku  VARCHAR(25) NOT NULL, 
       nama_author VARCHAR(20),
-      harga_buku FLOAT
+      Harga_Buku FLOAT
       );
     ";
 
