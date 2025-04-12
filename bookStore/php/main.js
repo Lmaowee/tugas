@@ -4,12 +4,12 @@ $(".btnedit").click(e =>{
   let id = $("input[name*='id']");
   let namabuku = $("input[name*='nama_buku']");
   let authorbuku = $("input[name*='nama_author']");
-  let hargabuku = $("input[name*='harga_buku']");
+  let hargabuku = $("input[name*='Harga_Buku']");
 
   id.val(textvalues[0]);
   namabuku.val(textvalues[1]);
   authorbuku.val(textvalues[2]);
-  hargabuku.val(textvalues[3].replace("$",""));
+  hargabuku.val(textvalues[3]);
 });
 
 function displayData(e){
